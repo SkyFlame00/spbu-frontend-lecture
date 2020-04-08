@@ -1,0 +1,45 @@
+body {
+    background: #888888;
+}
+
+.tooltip-target {
+    background: whitesmoke;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+
+.tooltip-target:hover {
+    background: rgb(230, 230, 230);
+}
+
+.tooltips {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.tooltip {
+    width: 200px;
+    padding: 10px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 0 5px 0 rgb(200, 200, 200);
+    display: none;
+    position: absolute;
+}
+
+.tooltip::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: white;
+    left: 15px;
+    top: -20px;
+}
+
+.tooltip_shown {
+    display: block;
+}
